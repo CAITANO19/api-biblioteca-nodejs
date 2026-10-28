@@ -33,6 +33,14 @@ O servidor sobe em `http://localhost:3000`. O banco é um arquivo SQLite (`datab
 
 > Atenção: `npm run seed` recria as tabelas e apaga os dados existentes.
 
+## Testes
+
+```bash
+npm test
+```
+
+Os testes usam o executor nativo do Node.js (`node --test`) e cobrem a validação com Zod e o tratamento de erros (JSON inválido, campos obrigatórios, tipos incorretos). Não dependem do banco de dados.
+
 ## Endpoints
 
 | Método | Rota | Descrição |
@@ -79,6 +87,7 @@ src/
   schemas/              validações com Zod
   middlewares/          validate e errorHandler
   seed.js               dados iniciais
+tests/                  testes automatizados (node --test)
 ```
 
 ## Autor
